@@ -272,8 +272,6 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 			firstPosition = getFirstVisiblePosition();
 			lastVisiblePosition = getLastVisiblePosition();
 			totalCount = getCount();
-			Log.i(TAG, "getCount():" + getCount() + ",getLastVisiblePosition:"
-					+ getLastVisiblePosition());
 			break;
 		// 移动
 		case MotionEvent.ACTION_MOVE:
