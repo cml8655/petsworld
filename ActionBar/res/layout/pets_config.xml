@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/config_system"
+                android:textSize="@dimen/config_common_half_size" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/config_auto_login"
+                    style="@style/configItemTextStyle_TopLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:drawableLeft="@android:drawable/ic_menu_edit"
+                    android:text="@string/config_auto_login" />
+
+                <CheckBox
+                    android:id="@+id/config_auto_login_checkbox"
+                    style="@style/configItemTextStyle_TopRight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/config_receive_recommend"
+                    style="@style/configItemTextStyle_BottomLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:drawableLeft="@android:drawable/ic_menu_edit"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/config_receive_recommend" />
+
+                <CheckBox
+                    android:id="@+id/config_receive_recommend_checkbox"
+                    style="@style/configItemTextStyle_BottomRight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/config_net_manager"
+                android:textSize="@dimen/config_common_half_size" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/config_only_wifi"
+                    style="@style/configItemTextStyle_TopLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:drawableLeft="@android:drawable/ic_menu_edit"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/config_only_wifi" />
+
+                <CheckBox
+                    android:id="@+id/config_only_wifi_checkbox"
+                    style="@style/configItemTextStyle_TopRight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/config_only_mobile"
+                    style="@style/configItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:drawableLeft="@android:drawable/ic_menu_edit"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/config_only_mobile" />
+
+                <CheckBox
+                    android:id="@+id/config_only_mobile_checkbox"
+                    style="@style/configItemTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/config_img_none"
+                    style="@style/configItemTextStyle_BottomLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:drawableLeft="@android:drawable/ic_menu_edit"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/config_img_none" />
+
+                <CheckBox
+                    android:id="@+id/config_img_none_checkbox"
+                    style="@style/configItemTextStyle_BottomRight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/config_cache"
+                android:textSize="@dimen/config_common_half_size" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/config_clear_cache"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4"
+                    android:background="#00E3E3"
+                    android:text="@string/config_cache_clear"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/config_header_text_size" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

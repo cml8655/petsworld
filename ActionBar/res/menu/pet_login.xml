@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/userRegister"
+        android:showAsAction="always"
+        android:title="注册"/>
+
+</menu>

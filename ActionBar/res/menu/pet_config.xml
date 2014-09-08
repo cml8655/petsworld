@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/config_progress"
+        android:actionViewClass="com.pets.ui.ProgressMenuItem"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/personCenter"
+        android:icon="@drawable/aa"
+        android:showAsAction="never"
+        android:title="个人中心"/>
+    <item
+        android:id="@+id/newDailyShare"
+        android:icon="@drawable/aa"
+        android:showAsAction="never"
+        android:title="发表说说"/>
+    <item
+        android:id="@+id/systemConfig"
+        android:icon="@drawable/aa"
+        android:showAsAction="never"
+        android:title="系统设置"/>
+    <item
+        android:id="@+id/userlogin"
+        android:icon="@drawable/aa"
+        android:showAsAction="never"
+        android:title="登录"/>
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/aa"
+        android:showAsAction="never"
+        android:title="获取新闻"/>
+
+</menu>

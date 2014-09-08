@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="config_set_str">设置中心</string>
+    <string name="config_auto_login">自动登入</string>
+    <string name="config_cache">缓存管理</string>
+    <string name="config_system">系统设置</string>
+    <string name="config_cache_clear">清空缓存</string>
+    <string name="config_receive_recommend">接收消息</string>
+    <!-- 图片下载设置 -->
+    <string name="config_net_manager">图片接收设置</string>
+    <string name="config_only_wifi">wifi</string>
+    <string name="config_only_mobile">移动网络</string>
+    <string name="config_img_none">不接收图片</string>
+
+</resources>

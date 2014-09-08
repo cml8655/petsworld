@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_share"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:showAsAction="ifRoom"
+        android:title="测试"/>
+    <!-- Search, should appear as action button -->
+    <item
+        android:id="@+id/action_search2"
+        android:actionLayout="@layout/activity_main3"
+        android:showAsAction="ifRoom"/>
+
+</menu>

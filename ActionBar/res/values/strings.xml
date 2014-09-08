@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="main_pager_str">
+        <item>萌宠中心</item>
+        <item>帖子社区</item>
+        <item>官方中心</item>
+    </string-array>
+
+    <!-- 设置中心 -->
+    <string name="personCenter"></string>
+    <string name="petConfig"></string>
+
+    <!--  -->
+    <string name="back">返回</string>
+    <string name="reflush">刷新</string>
+    <string name="jubao">举报</string>
+    <string name="share">分享</string>
+
+    <!-- 登录 -->
+    <string name="username">账号：</string>
+    <string name="username_hint">账号/邮箱/手机号</string>
+    <string name="password">密码：</string>
+    <string name="password_hint">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="login_cancel">取消</string>
+    <string name="app_name">萌宠</string>
+    <string name="fragment_one">页面一</string>
+    <string name="fragment_two">页面二</string>
+    <string name="fragment_three">页面三</string>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="登录设置" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/entrance_love"
+            android:key="config_auto_login"
+            android:summary="@string/config_auto_login" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="config_receive_recommend"
+            android:summary="@string/config_receive_recommend" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:icon="@drawable/entrance_love"
+        android:title="图片设置" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/entrance_love"
+            android:key="config_img_none"
+            android:summary="浏览时不接收图片"
+            android:title="@string/config_img_none" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="config_only_wifi"
+            android:summary="在有wifi时接收图片"
+            android:title="@string/config_only_wifi" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="config_only_mobile"
+            android:summary="有移动网路时接收图片"
+            android:title="@string/config_only_mobile" />
+    </PreferenceCategory>
+
+    <SwitchPreference
+        android:icon="@drawable/entrance_love"
+        android:summary="每周日会自动清空缓存"
+        android:title="自动清空缓存" />
+
+    <PreferenceScreen
+        android:icon="@drawable/entrance_love"
+        android:title="清空缓存" >
+    </PreferenceScreen>
+
+</PreferenceScreen>

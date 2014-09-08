@@ -1,0 +1,31 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="configBaseStyle">
+        <item name="android:textSize">@dimen/config_header_text_size</item>
+    </style>
+
+    <style name="configItemTextStyle">
+        <item name="android:textSize">@dimen/config_common_size</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">#00E3E3</item>
+        <item name="android:background">@drawable/pet_config_default</item>
+        <!-- #00E3E3 -->
+    </style>
+
+    <style name="configItemTextStyle_TopLeft" parent="configItemTextStyle">
+        <item name="android:background">@drawable/pet_config_tl_corner</item>
+    </style>
+
+    <style name="configItemTextStyle_TopRight" parent="configItemTextStyle">
+        <item name="android:background">@drawable/pet_config_tr_corner</item>
+    </style>
+
+    <style name="configItemTextStyle_BottomRight" parent="configItemTextStyle">
+        <item name="android:background">@drawable/pet_config_br_corner</item>
+    </style>
+
+    <style name="configItemTextStyle_BottomLeft" parent="configItemTextStyle">
+        <item name="android:background">@drawable/pet_config_bl_corner</item>
+    </style>
+
+</resources>

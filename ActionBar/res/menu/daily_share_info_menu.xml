@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+          <item
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:showAsAction="always"
+        android:title="测试"/>
+    -->
+    <item
+        android:showAsAction="always"
+        android:id="@+id/daily_share_reflush"
+        android:icon="@drawable/gd_action_bar_refresh"
+        android:title="@string/reflush"/>
+    <item
+        android:showAsAction="never"
+        android:title="@string/share"/>
+    <item
+        android:showAsAction="never"
+        android:title="@string/jubao"/>
+
+</menu>
