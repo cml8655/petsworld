@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.AbsListView;
@@ -414,7 +415,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 	 */
 	private void toggleProgressBar(ImageView img, ProgressBar progress,
 			boolean showImg) {
-		
+
 		img.clearAnimation();
 
 		if (showImg) {
@@ -423,6 +424,8 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 		} else {
 			progress.setVisibility(VISIBLE);
 			img.setVisibility(GONE);
+			progress.startAnimation(AnimationUtils.loadAnimation(getContext(),
+					R.anim.pull_pro_anim));
 		}
 	}
 
