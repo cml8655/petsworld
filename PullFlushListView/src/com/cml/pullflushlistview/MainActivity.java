@@ -5,14 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.cml.pullflushlistview.PullRefleshListView.OnFlushListener;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.cml.pullflushlistview.PullRefleshListView.OnFlushListener;
 
 public class MainActivity extends Activity {
 

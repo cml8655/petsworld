@@ -76,6 +76,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 
 	private Animation animation;
 	private Animation reverseAnimation;// 旋转动画，旋转动画之后旋转动画.
+	private Animation progressAnim;// progressbar滚动动画
 
 	// ====================下拉组件===================
 	// 第一次点击的y坐标
@@ -197,6 +198,14 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 		reverseAnimation.setInterpolator(new LinearInterpolator());
 		reverseAnimation.setDuration(250);
 		reverseAnimation.setFillAfter(true);
+
+		progressAnim = new RotateAnimation(0, 360,
+				RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+		progressAnim.setRepeatCount(-1);
+		progressAnim.setRepeatMode(Animation.RESTART);
+		progressAnim.setInterpolator(new LinearInterpolator());
+		progressAnim.setDuration(500);
 	}
 
 	/***
@@ -424,8 +433,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 		} else {
 			progress.setVisibility(VISIBLE);
 			img.setVisibility(GONE);
-			progress.startAnimation(AnimationUtils.loadAnimation(getContext(),
-					R.anim.pull_pro_anim));
+			progress.startAnimation(progressAnim);
 		}
 	}
 
