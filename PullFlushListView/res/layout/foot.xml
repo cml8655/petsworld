@@ -39,12 +39,14 @@
 
             <!-- 进度条 -->
 
-            <ProgressBar
+             <ProgressBar
                 android:id="@+id/foot_progressBar"
-                style="?android:attr/progressBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateDrawable="@drawable/aa"
+                android:indeterminate="false"
                 android:visibility="gone" />
         </FrameLayout>
 

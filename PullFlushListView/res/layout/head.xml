@@ -36,10 +36,9 @@
                 android:id="@+id/head_progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:indeterminateBehavior="repeat"
-                android:indeterminateDrawable="@drawable/aa"
-                android:indeterminateDuration="500"
+                android:layout_gravity="center"
+                android:indeterminateBehavior="cycle"
+                android:indeterminateDrawable="@drawable/default_ptr_rotate"
                 android:indeterminate="false"
                 android:visibility="gone" />
         </FrameLayout>
