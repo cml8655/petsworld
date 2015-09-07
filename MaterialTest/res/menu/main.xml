@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.materialtest.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <item
+        android:icon="@drawable/ic_launcher"
+        android:title="第二个"/>
+    <item
+        android:icon="@drawable/ic_launcher"
+        android:title="第二个"/>
+    <item
+        android:icon="@drawable/ic_launcher"
+        android:title="第二个"/>
+    <item
+        android:icon="@drawable/ic_launcher"
+        android:title="Version">
+        <menu>
+            <item
+                android:icon="@drawable/ic_launcher"
+                android:title="第二11个"/>
+            <item
+                android:icon="@drawable/ic_launcher"
+                android:title="第二11个"/>
+        </menu>
+    </item>
+
+</menu>

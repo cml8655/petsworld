@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.materialtest.widget.ScrollHideLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/changeView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#123456"
+        android:gravity="center"
+        android:text="点击搜索需要的内容"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+    <com.example.materialtest.widget.LyricTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:text="最近，一款叫做百度翻译的App火了，因为它里面有一个神奇的功能——实物翻译，这个功能最神奇的地方就是可以100%地规避正确答案，给你意想不到的结果。我们首先进入界面，很容易就找到了“实物翻译”功能。" />
+
+    <com.example.materialtest.widget.TimerButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="发送验证码" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#66cc66" />
+
+    <ListView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</com.example.materialtest.widget.ScrollHideLayout>
