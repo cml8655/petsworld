@@ -1,6 +1,9 @@
 package com.example.materialtest;
 
+import com.example.materialtest.activity.CommonStatusbarActivity;
+
 import android.app.AlertDialog.Builder;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -27,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 			@Override
 			public void onClick(View v) {
-				Snackbar.make(v, "确定提示", Snackbar.LENGTH_LONG).setActionTextColor(Color.WHITE).setAction("确定", new OnClickListener() {
+				Snackbar.make(v, "确锟斤拷锟斤拷示", Snackbar.LENGTH_LONG).setActionTextColor(Color.WHITE)
+						.setAction("确锟斤拷", new OnClickListener() {
 
 					@Override
 					public void onClick(View v) {
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
-		// 设置TextInputLayout事件
+		// 锟斤拷锟斤拷TextInputLayout锟铰硷拷
 		final TextInputLayout textInputLayout = (TextInputLayout) findViewById(R.id.til_pwd);
 
 		EditText editText = textInputLayout.getEditText();
@@ -47,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 				if (s.length() > 4) {
-					textInputLayout.setError("密码长度不能大于4");
+					textInputLayout.setError("锟斤拷锟诫长锟饺诧拷锟杰达拷锟斤拷4");
 					textInputLayout.setErrorEnabled(true);
 				} else {
 					textInputLayout.setErrorEnabled(false);
@@ -67,20 +71,24 @@ public class MainActivity extends AppCompatActivity {
 		// tabLayout.addTab(tabLayout.newTab().setText("tab1"));
 		// tabLayout.addTab(tabLayout.newTab().setText("tab2"));
 		// tabLayout.addTab(tabLayout.newTab().setText("tab3"));
-		// 与viewpager共同滑动 tabLayout.setupWithViewPager(viewPager);
+		// 锟斤拷viewpager锟斤拷同锟斤拷锟斤拷 tabLayout.setupWithViewPager(viewPager);
 
 	}
 
 	/**
-	 * 显示最新的material按钮
+	 * 锟斤拷示锟斤拷锟铰碉拷material锟斤拷钮
 	 */
 	private void showMaterialDialog() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("系统提示");
-		builder.setMessage("确定退出？");
-		builder.setPositiveButton("确定", null);
-		builder.setNegativeButton("取消", null);
+		builder.setTitle("系统锟斤拷示");
+		builder.setMessage("确锟斤拷锟剿筹拷锟斤拷");
+		builder.setPositiveButton("确锟斤拷", null);
+		builder.setNegativeButton("取锟斤拷", null);
 		builder.create().show();
+	}
+
+	public void commonStatusbar(View v) {
+		startActivity(new Intent(this, CommonStatusbarActivity.class));
 	}
 
 }

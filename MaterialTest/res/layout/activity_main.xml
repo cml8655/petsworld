@@ -10,6 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.materialtest.MainActivity" >
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="commonStatusbar"
+        android:text="沉浸式菜单使用" />
+
     <TextView
         android:id="@+id/hello"
         android:layout_width="wrap_content"
