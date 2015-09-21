@@ -13,7 +13,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.AbsListView;
@@ -136,13 +135,10 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 
 		footView = LayoutInflater.from(context).inflate(R.layout.foot, null);
 
-		footArrowImg = (ImageView) footView
-				.findViewById(R.id.foot_arrowImageView);
+		footArrowImg = (ImageView) footView.findViewById(R.id.foot_arrowImageView);
 		footTextView = (TextView) footView.findViewById(R.id.foot_tipsTextView);
-		footUpdateTimeTextView = (TextView) footView
-				.findViewById(R.id.foot_lastUpdatedTextView);
-		footProgressBar = (ProgressBar) footView
-				.findViewById(R.id.foot_progressBar);
+		footUpdateTimeTextView = (TextView) footView.findViewById(R.id.foot_lastUpdatedTextView);
+		footProgressBar = (ProgressBar) footView.findViewById(R.id.foot_progressBar);
 
 		addFooterView(footView, null, false);
 
@@ -160,10 +156,8 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 
 		arrowImg = (ImageView) headView.findViewById(R.id.head_arrowImageView);
 		tipTextView = (TextView) headView.findViewById(R.id.head_tipsTextView);
-		updateTimeTextView = (TextView) headView
-				.findViewById(R.id.head_lastUpdatedTextView);
-		headProgressBar = (ProgressBar) headView
-				.findViewById(R.id.head_progressBar);
+		updateTimeTextView = (TextView) headView.findViewById(R.id.head_lastUpdatedTextView);
+		headProgressBar = (ProgressBar) headView.findViewById(R.id.head_progressBar);
 
 		addHeaderView(headView, null, false);
 
@@ -184,23 +178,20 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 	private void initAnimation() {
 
 		// 旋转动画
-		animation = new RotateAnimation(0, -180,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+		animation = new RotateAnimation(0, -180, RotateAnimation.RELATIVE_TO_SELF, 0.5f,
 				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
 		animation.setInterpolator(new LinearInterpolator());// 匀速
 		animation.setDuration(250);
 		animation.setFillAfter(true);// 停留在最后状态.
 
 		// 反向旋转动画
-		reverseAnimation = new RotateAnimation(-180, 0,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+		reverseAnimation = new RotateAnimation(-180, 0, RotateAnimation.RELATIVE_TO_SELF, 0.5f,
 				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
 		reverseAnimation.setInterpolator(new LinearInterpolator());
 		reverseAnimation.setDuration(250);
 		reverseAnimation.setFillAfter(true);
 
-		progressAnim = new RotateAnimation(0, 360,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+		progressAnim = new RotateAnimation(0, 360, RotateAnimation.RELATIVE_TO_SELF, 0.5f,
 				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
 		progressAnim.setRepeatCount(-1);
 		progressAnim.setRepeatMode(Animation.RESTART);
@@ -216,18 +207,15 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 	private void measureView(View child) {
 		ViewGroup.LayoutParams p = child.getLayoutParams();
 		if (p == null) {
-			p = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
-					ViewGroup.LayoutParams.WRAP_CONTENT);
+			p = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 		}
 		int childWidthSpec = ViewGroup.getChildMeasureSpec(0, 0 + 0, p.width);
 		int lpHeight = p.height;
 		int childHeightSpec;
 		if (lpHeight > 0) {
-			childHeightSpec = MeasureSpec.makeMeasureSpec(lpHeight,
-					MeasureSpec.EXACTLY);
+			childHeightSpec = MeasureSpec.makeMeasureSpec(lpHeight, MeasureSpec.EXACTLY);
 		} else {
-			childHeightSpec = MeasureSpec.makeMeasureSpec(0,
-					MeasureSpec.UNSPECIFIED);
+			childHeightSpec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
 		}
 		child.measure(childWidthSpec, childHeightSpec);
 	}
@@ -237,8 +225,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 	}
 
 	@Override
-	public void onScroll(AbsListView view, int firstVisibleItem,
-			int visibleItemCount, int totalItemCount) {
+	public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 
 	}
 
@@ -422,8 +409,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 	 * @param showText
 	 *            是否显示文本信息
 	 */
-	private void toggleProgressBar(ImageView img, ProgressBar progress,
-			boolean showImg) {
+	private void toggleProgressBar(ImageView img, ProgressBar progress, boolean showImg) {
 
 		img.clearAnimation();
 
@@ -462,8 +448,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 			setFootText("松开刷新");
 			state = PullState.PULL_UP;
 			flushState = FlushState.PULLUP;
-			footView.setPadding(0, 0, 0,
-					(int) (ev.getY() - lastMovePositionY + footViewHeight));
+			footView.setPadding(0, 0, 0, (int) (ev.getY() - lastMovePositionY + footViewHeight));
 		} else {
 			setFootText("取消刷新");
 			state = PullState.PULL_DOWN;
@@ -500,9 +485,7 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 			flushState = FlushState.CANCEL;
 		} else {
 
-			headView.setPadding(0,
-					(int) (ev.getY() - lastMovePositionY + headViewHeight), 0,
-					0);
+			headView.setPadding(0, (int) (ev.getY() - lastMovePositionY + headViewHeight), 0, 0);
 
 			setTipText("松开刷新");
 			state = PullState.PULL_DOWN;
@@ -559,15 +542,13 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 		SharedPreferences pre = null;
 
 		if (!isFoot) {
-			pre = getContext().getSharedPreferences(UPDATE_TIME_PRE,
-					Context.MODE_PRIVATE);
+			pre = getContext().getSharedPreferences(UPDATE_TIME_PRE, Context.MODE_PRIVATE);
 
 			return pre.getString(UPDATE_TIME_KEY, "");
 
 		}
 
-		pre = getContext().getSharedPreferences(FOOT_UPDATE_TIME_PRE,
-				Context.MODE_PRIVATE);
+		pre = getContext().getSharedPreferences(FOOT_UPDATE_TIME_PRE, Context.MODE_PRIVATE);
 
 		return pre.getString(FOOT_UPDATE_TIME_KEY, "");
 
@@ -584,25 +565,21 @@ public class PullRefleshListView extends ListView implements OnScrollListener {
 		SharedPreferences pre = null;
 
 		if (!isFoot) {
-			pre = getContext().getSharedPreferences(UPDATE_TIME_PRE,
-					Context.MODE_PRIVATE);
+			pre = getContext().getSharedPreferences(UPDATE_TIME_PRE, Context.MODE_PRIVATE);
 
 			Editor editor = pre.edit();
 
-			editor.putString(UPDATE_TIME_KEY,
-					format.format(new Date(System.currentTimeMillis())));
+			editor.putString(UPDATE_TIME_KEY, format.format(new Date(System.currentTimeMillis())));
 
 			editor.commit();
 			return;
 		}
 
-		pre = getContext().getSharedPreferences(FOOT_UPDATE_TIME_PRE,
-				Context.MODE_PRIVATE);
+		pre = getContext().getSharedPreferences(FOOT_UPDATE_TIME_PRE, Context.MODE_PRIVATE);
 
 		Editor editor = pre.edit();
 
-		editor.putString(FOOT_UPDATE_TIME_KEY,
-				format.format(new Date(System.currentTimeMillis())));
+		editor.putString(FOOT_UPDATE_TIME_KEY, format.format(new Date(System.currentTimeMillis())));
 
 		editor.commit();
 

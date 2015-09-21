@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:indeterminateBehavior="cycle"
-                android:indeterminateDrawable="@drawable/aa"
+                android:indeterminateDrawable="@drawable/ic_launcher"
                 android:indeterminate="false"
                 android:visibility="gone" />
         </FrameLayout>
